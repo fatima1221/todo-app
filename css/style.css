@@ -1,0 +1,374 @@
+body{
+    font-family: 'Zilla Slab', serif;
+    font-size: 15px;
+    padding:0;
+    margin:0;
+    height: 100vh;
+    
+    background-image: linear-gradient(#3c6382, #82ccdd, #45aaf2);   
+    overflow: hidden;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.fas, .fab, .far{
+	cursor: pointer;
+}
+
+/*Side Bar*/
+.side-bar{
+    width: 300px;
+    max-width: 100%;
+    height: 100vh;
+    background-color: white;
+    border: 1px solid white;
+    box-shadow: 0 8px 8px 0 black;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 15px;
+}
+
+.line{
+    border-bottom: 1px solid #81CCE8;
+}
+
+.personal_info{
+    text-align: center;
+    font-size: 18px;
+}
+
+.profile_photo{
+	flex-direction: column;
+}
+
+.profile_photo_inner {
+    width: 100px;
+	height: 90px;
+	border-radius: 20%;
+	border: 2px solid #45aaf2;
+    max-width: 100%;
+	height: auto;
+	margin-bottom: 10px;
+} 
+
+
+.profile_info_inner{
+	background-color: #F8EFBA;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.profile_icons{
+	color: #45aaf2;
+	font-size: 25px;
+	padding-right: 7px;
+
+}
+
+.fa-user-edit{
+	position: absolute;
+	left: 80px;
+	right: 5px;
+}
+
+p{
+	text-align: left;
+	padding-left: 5px;
+	line-height: 1.4em;
+}
+
+span{
+	font-weight: 700;
+	color: #e7693b;
+}
+
+/*date and time*/
+.box{
+	text-align: center;
+	padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#daymonthyear{  
+    color: black;
+    font-size: 25px;
+    font-weight: 700;
+  
+}
+
+#hourminutesecond{
+    font-size: 25px;
+    font-weight: 700;
+
+}
+
+/*weather*/
+.weather{
+    padding: 15px;
+    font-size: 23px;
+}
+
+.weather_title{
+    font-weight: 700;
+    text-align: center;
+}
+
+.weather_content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sync{
+	text-align: center;
+	padding-top: 15px;
+}
+
+
+
+/*Todo*/
+/*Todo's nav*/
+.nav{
+    width: 800px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-tasks{
+    padding-right: 10px;
+    color: #e7693b;
+}
+
+.logo{
+    font-weight: 700;
+    color: white;
+}
+
+.search-box{
+    padding-bottom: 100px;
+}
+
+input[type=search] {
+    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.4);
+    background: #ffffff;
+    border: 2px solid #e7693b;
+    outline: none;
+    width: 300px;
+    height: 45px;
+    border-radius: 10px 0 0 10px;
+    font-size: 1.4em;
+    font-weight: 300;
+    padding: 0px 10px;
+    letter-spacing: 2px;
+    color: #e7693b;
+}
+
+  
+  ::placeholder {
+    color: #81CCE8;
+    font-size: .8em;
+}
+  
+  .search-btn {
+    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.4);
+    height: 44px;
+    width: 55px;
+    outline: none;
+    border-radius: 0 10px 10px 0;
+    background: #e7693b;
+    color: #ffffff;
+    border: none;
+    transition: all 0.3s ease;
+    
+}
+  .search-btn:hover {
+    transition: all 0.3s ease;
+}
+  .search-btn:hover i {
+	font-size: 2em;
+}
+  .search-btn i {
+    font-size: 1.8em;
+}
+
+
+/*Todo actually*/
+
+.todo{
+    width: 800px;
+    max-width: 100%;
+    background-color: white;
+    border-radius: 10px;
+	box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.486);
+	padding-bottom: 20px;
+}
+
+.header_todo{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+
+
+#new-task {
+	padding-top: 35px;
+	border: none;
+	background: rgba(0, 0, 0, 0.003);
+	box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+	margin: 0;
+	width: 100%;
+	font-size: 28px;
+	line-height: 1.2em;
+	border: 0;
+	color: inherit;
+
+}
+
+#add {
+    width: 70px;
+    padding: 8px;
+    margin-top: 0;
+    border: 1px solid #ffffff;
+    border-radius: 14px;
+	background-color: #e7693b;
+	outline: none;
+}
+
+#add:hover {
+    background-color:  #81CCE8;
+    border: 1px solid #ddd;
+    transition: background-color .2s linear;
+}
+
+.fa-plus{
+    color: white;
+	font-size: 20px;
+}
+
+.fa-plus:hover{
+	font-size: 25px;
+}
+
+/*Todo's list*/
+
+.todo_list{
+	padding-top: 10px;
+	padding-left: 15px;
+}
+
+ul {
+    margin: 5px 0;
+    padding: 0;
+}
+
+li * {
+    float: left;
+}
+
+li, h3 {
+    clear: both;
+    list-style: none;
+}
+
+input, button {
+    outline: none;
+}
+
+.tasks_btn {
+    background: none;
+    border: 0px;
+    font-size: 20px;
+    font-family: sans-serif;
+    cursor: pointer;
+    float: right;
+	margin: 8px auto;
+	outline: none;
+}
+
+.tasks_btn:hover{
+	color: #e7693b;
+}
+
+
+h3 {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 0;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+}
+
+input[type="text"] {
+    margin: 1px 0;
+    font-size: 20px;
+    line-height: 18px;
+    height: 18px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 6px;
+    font-family: sans-serif;
+    color: #888;
+}
+
+input[type="text"]:focus {
+    color: black;
+}
+
+li {
+    overflow: hidden;
+}
+
+li > input[type="checkbox"] {
+    margin: 0 10px;
+    position: relative;
+    top: 15px;
+    transform: scale(1.5);
+}
+
+li > label {
+    font-size: 20px;
+	width: 650px;
+    max-width: 100%;
+	padding: 1px 0 0 11px;
+	margin-top: 5px;
+}
+
+li > input[type="text"] {
+	width: 650px;
+	max-width: 100%;
+	
+}
+
+li > .delete:hover {
+    color: #CF2323;
+}
+
+#finished-tasks label, #finished-tasks button {
+    text-decoration: line-through;
+    color: lightgray;
+    outline: none;
+}
+
+ul li input[type=text] {
+    display: none;
+}
+
+ul li.editMode input[type=text] {
+	display: block;
+	margin-top: 10px
+}
+
+ul li.editMode label {
+    display: none;
+}
+
+button.checkbox {
+    float: left;
+    outline: none;
+}

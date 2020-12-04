@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Simple ToDo</title>
+    
+    <link rel="icon" type="image/x-icon" href="img/todo-icon.png">
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;600&display=swap" rel="stylesheet">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!--Icons-->
+    <link rel="stylesheet" href="css/material-icons.css">
+    <script src="https://kit.fontawesome.com/018386192a.js" crossorigin="anonymous"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    
+
+
+      <div class="row">
+
+        <!--SideBar-->
+            <div class="col-4">
+                <div class="side-bar">
+                    <div class="personal_info">
+                        <div class="profile_photo">
+                            <img src="img/blankprofilepicture.jpg" alt="" class="profile_photo_inner">
+                            <div>
+                                <i class="far fa-images profile_icons"></i>   
+                                <i class="fas fa-bell profile_icons"></i>
+                                <i class="fas fa-cogs profile_icons"></i>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="profile_info_inner">
+                            <i class="fas fa-user-edit"></i>
+                            <p><span>First Name: </span>Fatima</p>
+                            <p><span>Last Name: </span>Askerova</p>
+                            <p><span>Work place: </span>Tech Academy</p>
+                            <p><span>Position: </span>Student coordinator</p> 
+                        </div>
+                        
+                    </div>
+
+                    <div class="line"></div>
+
+                    <div class="essentual_info">
+                        
+                        <div class="box">
+                            <div class="date">
+                              <div id="daymonthyear"></div>
+                            </div>
+                            <div class="time">
+                              <div id="hourminutesecond"></div>
+                            </div>
+                          </div>
+
+                        <div class="line"></div>
+
+                        <div class="weather">
+
+                                <div class="weather_title"><p>Weather</p></div>
+                                <div class="notification"></div>
+
+                            <div class="weather_content">
+
+                                <div class="weather_info">
+                                    <div class="temperature-degree">
+                                        <p></p>
+                                        <span></span>
+                                    </div>
+                                    <div class="temperature-description">
+                                        <p></p>
+                                    </div>
+                                    <div class="location">
+                                        <p class="location-timezone"><i></i></p>
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                                <div class="weather_icons">
+                                    <canvas class="icon" width="50" height="50"></canvas> 
+                                </div> 
+                                
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="line"></div>
+
+                    <div class="sync">
+                        <h5>Sync with your social media</h5>
+                        <a class="fb-ic">
+                            <i class="fab fa-facebook-f fa-lg white-text mr-md-4 mr-2 fa-2x"> </i>
+                        </a>
+                        <a class="gplus-ic">
+                            <i class="fab fa-google-plus-g fa-lg white-text mr-md-4 mr-2 fa-2x"> </i>
+                        </a>
+                        <a class="li-ic">
+                            <i class="fab fa-linkedin-in fa-lg white-text mr-md-4 mr-2 fa-2x"> </i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+        <!--Todo-->
+            <div class="col-8 pt-5">
+
+                <div class="nav">
+                    <h1 class="logo"><i class="fas fa-tasks"></i>Simple ToDo</h1>
+                    <div class="search-box">
+                        <input type="search" placeholder="Search here..." />
+                        <button type="submit" class="search-btn"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+
+                <div class="todo"> 
+
+                    <div class="header_todo">
+                        <input id="new-task" placeholder="Add new task here..." type="text" autofocus="">
+                        <button id="add"><i class="fas fa-plus"></i></button>
+                    </div>
+
+                  <div class="todo_list">
+                      <h3>Your ToDo list: </h3>
+                      <ul id="unfinished-tasks">
+                         <!-- <li>
+                            <button class="material-icons checkbox tasks_btn">
+                                <i class="material-icons">check_box_outline_blank</i>
+                            </button>
+                            <label>1234</label>
+                            <input type="text">
+                            <button class="material-icons tasks_btn">
+                                <i class="material-icons edit">edit</i>
+                            </button>
+                            <button class="material-icons tasks_btn">
+                                <i class="material-icons delete">delete</i>
+                            </button>
+                        </li>
+
+                        <li class="editMode">
+                            <button class="material-icons checkbox tasks_btn">
+                                <i class="material-icons">check_box_outline_blank</i>
+                            </button>
+                            <label>1234</label>
+                            <input type="text"  value="1234">
+                            <button class="material-icons tasks_btn">
+                                <i class="material-icons save">save</i>
+                            </button>
+                            <button class="material-icons tasks_btn">
+                                <i class="material-icons delete">delete</i>
+                            </button>
+                        </li> -->
+                      </ul>
+
+                      <h3>Finished ToDo List: </h3>
+                      <ul id="finished-tasks">
+                          <!--  <li>
+                                <button class="material-icons checkbox tasks_btn">
+                                    <i class="material-icons">check_box</i>
+                                </button>
+                                <label>1234</label>
+                                <input type="text">
+                                <button class="material-icons tasks_btn">
+                                    <i class="material-icons edit">edit</i>
+                                </button>
+                                <button class="material-icons tasks_btn">
+                                    <i class="material-icons delete">delete</i>
+                                </button>
+                            </li>-->
+                        </ul>
+                  </div>
+                    
+                </div>
+            </div>
+
+        </div>
+
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+    <script src="js/skycons.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
